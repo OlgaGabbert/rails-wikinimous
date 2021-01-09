@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Articles</h5>
+    <div class="card-body">
+      <h5 class="card-title"><%= @article.name %>
+        <%= link_to "🖊️", edit_article_path(@article) %>
+        <%= link_to "🗑", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></h5>
+      <p class="card-text"><%= @article.content %></p>
+    </div>
+</div>
+<br><%= link_to "Back to articles", articles_path %><br>
